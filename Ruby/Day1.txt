@@ -1,0 +1,402 @@
+Ruby Training -Day 1
+programs:
+1) Find Prime Number:
+def IsPrime(num)
+	i=2
+	while (i<num)
+		if(num%i==0)
+			return "Not-Prime Number"
+			end
+		n+=1
+	end
+	return "Prime number"
+end
+
+
+
+	
+2)Reverse a to z
+	str="abcdefghijklmnopqrstuvwxyz"
+	str.reverse()
+	
+	
+3)Classify class into elementary,middle,highschool or college
+def ClassifyGrade(num)
+ if(num<6)
+  	return "Elemetary School"
+ end
+ if(num<9)
+	return "Middle School"
+ end
+ if(num<13)
+	return "High School"
+ end
+ return "College"
+end
+	
+	
+4)Regex 
+regex for
+Name: 
+	r= /^[a-zA-Z\-\`]++(?: [a-zA-Z\-\`]++)?$/
+	(" " =~r)? "True" : "False"
+Mobile:
+	r=/\d{10}/
+	(" " =~r)? "True" : "False"
+Gender:
+	r=/((^F|^f)emale$)|((^M|m)ale$)/
+	(" " =~r)? "True" : "False"
+	
+Mail:
+	r=/[a-z]@[a-z].[a-z]/
+	(" " =~r)? "True" : "False"
+Amount:
+	r=/\d/
+	(" " =~r)? "True" : "False"
+	
+
+	
+		
+5)Finding class from IP address
+
+def NetworkClass(str)
+ str1=str.split(".")
+ num=str1[0].to_i()
+ 
+ if(num==127)
+ 	return "Reserved"
+ end
+ if(num<127)
+ 	return "Class A"
+ end
+ if(num<192)
+ 	return "Class B"
+ end
+ if(num<224)
+ 	return "Class C"
+ end
+ if(num<240)
+ 	return "Class D"
+ end
+ 
+ end
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+		

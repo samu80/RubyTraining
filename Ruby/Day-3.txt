@@ -1,0 +1,63 @@
+module WillCountryGet
+	def GettingLoan
+		puts"Enter country,s GDP in trillions:"
+		c= gets.chomp.to_i
+		
+		if(c>1)
+			return "Yes"
+		end
+		return "No"
+	end
+	
+	def GettingSeatInUN
+		puts"Enter country,s population in crores:"
+		c= gets.chomp.to_i
+		
+		if(c>100)
+			return "Yes"
+		end
+		return "No"
+	end
+	
+	def WinningWar
+		puts"Enter country,s Army Strength in thousands:"
+		c= gets.chomp.to_i
+		
+		if(c>500)
+			return "Yes"
+		end
+		return "No"
+	end
+end
+
+class Countries
+	include WillCountryGet
+	
+	def initialize(name,population,gdp,armyStrength)
+		@name=name
+		@population=population
+		@gdp=gdp
+		@astrength=armyStrength
+	end
+	
+	def GetDetail
+		puts "Country's Details:"
+		puts "Name: #{@name}"
+		puts "Population: #{@population} crores"
+		puts "GDP: $ #{@gdp} trillion"
+		puts "Armry Strength: #{@astrength} k"
+	end
+	
+	
+	
+		
+end
+
+c=Countries.new("India",130,2.6,960)
+c.GetDetail
+c.GettingLoan
+c.GettingSeatInUN		
+c.WinningWar		
+	
+	
+	

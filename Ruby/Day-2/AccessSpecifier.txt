@@ -1,0 +1,35 @@
+class Specifier
+	def public_method
+		puts "This public_method can be accessed directly outside class"
+		protected_method
+		private_method
+	end
+	
+	protected 
+	def protected_method
+		puts "This protected_method can accessed by using public method of same class or inherited class"
+		
+	end
+	
+	private
+	def private_method
+		puts "This private_method is called through public methods"
+	end
+		
+end
+
+class Inherit < Specifier
+	def display
+		protected_method
+		private_method
+	end
+end
+
+		
+ 
+
+I=Inherit.new
+I.public_method
+I.display
+
+

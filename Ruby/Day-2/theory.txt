@@ -1,0 +1,81 @@
+1)Why what how OOPs
+Ans:
+	1)Object-oriented programming aims to implement real-world entities
+The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.for making code clean and easy understandable
+2)OOPs used to structure a software program into simple, reusable pieces of code blueprints (classes), which are used to create individual instances of objects.
+3)Includes:
+	i)Classes: These are blueprints or moulds 
+	ii)Objects: These are instances of class (real time entity)
+	iii)Abstraction: It hides data from user and shows only the essential things to uesr
+	iv)Encapsulation: It binds data together like class contains different methods
+	v)Inheritance: New class can be derived from old one is inheritance. derived class can aquire all parent methods so no need to 		declare same methods again.
+	
+	
+2)Classes:
+
+	class is like a blueprint that allows you to create objects and to create methods that relate to those objects
+	Everything in ruby is a class like Integer,String etc
+	
+	
+3)Class methods and instance methods:
+	 class method provides functionality to a class itself, while an instance method provides functionality to one instance of a class.
+e.g 
+class Hello
+  def self.class_method
+    "called from a class method"
+  end
+
+  def instance_method
+    "called from an instance method"
+  end
+end
+
+
+Hello.class_method
+h=Hello.new
+h.instance_method
+
+4)Access Specifier: there are 3 specifiers
+
+    i)public - members are accessible from outside the class directly
+    ii)private - members cannot be accessed (or viewed) from outside the class but can be called from public methods of same class
+    iii)protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes.
+    
+    
+5)Getter and setter:
+	these methods allow us to access a class’s instance variable from outside the class
+	Getter methods are used to get the value of an instance variable while the setter methods are used to set the value of an instance variable of some class.
+	
+E.g
+class Name
+def initialize(name) 
+    @name = name 
+  end
+   
+  def getName
+    @name
+  end
+  
+  def setName=(name)
+  	@name=name
+  end
+  	
+end
+n=Name.new("Samruddhi")
+n.getName
+n.setName=("Samu")
+
+These are also known as accessers:
+there are 3 types:
+    1)attr_reader : This accessor generates the automatic Getter method for the given item.
+    2)attr_writer : This accessor generates the automatic Setter method for the given item.
+    3)attr_accessor : This accessor generates the automatic Getter & Setter method for the given item.
+
+
+
+Day 3
+include, prepend,module,extend,name spacing,
+
+
+
+

@@ -1,0 +1,66 @@
+class Teacher
+	def initialize(x,y,z,w)
+		@no,@math,@history,@english=x,y,z,w
+	end
+	
+	def setNo=(no)
+		
+		@no=no
+	end
+	
+	def setMath=(x)
+		@math=x
+	end
+	def setHistory=(y)
+		@history=y
+	end
+	
+	def setEnglish=(z)
+		@english=z
+		
+	end
+		
+	
+	def percent
+		@per=(@math+@history+@english)/3
+	end
+	
+	def marks(no)
+		puts "Your Marks:"
+		puts "Maths: #{@math}"
+		puts "history: #{@history}"
+		puts "English: #{@english}"
+		percent
+		puts "Total percentage: #{@per}"
+	end
+		
+end
+
+class Student < Teacher
+	
+	def display
+		puts "Enter your roll no:"
+		no=gets.chomp
+		marks(no)
+	end
+end
+
+
+
+
+
+
+s=Student.new(1,0,0,0)
+s.setNo=(1)
+s.setMath=(98)
+s.setHistory=(93)
+s.setEnglish=(95)
+s.display
+
+s1=Student.new(2,78,89,90)
+s1.display
+		
+		
+	
+		
+	

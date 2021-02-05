@@ -1,0 +1,166 @@
+Ruby Training - Day 2
+
+1)
+Parameter passing: There are 3 types
+According to priority
+	1)Required: exact no of parameters 
+	e.g def sum(x,y,z)
+		return x+y+z
+	    end
+	   sum(1,3,5) -> Ans: 9
+	   
+	   
+	 2)Default: by providing default value
+	 e.g def sum(x,y=2,z)
+	 	return x+y+z
+	     end
+	     
+	     sum(1,2) -> Ans: 5
+	     sum(1,4,7) -> Ans: 12
+	     
+	  3)Optional:by passing pointer
+	  e.g def print_No(*a)
+	  	p a
+	      end
+	      
+	      print_no(1,3,5) -> Ans: [1,3,5]
+	      print_no(1,5,2,9,6) ->Ans: [1,5,2,9,6]	
+	      
+	    
+	  
+2) Loops & iterator:
+
+	
+	1) while do loop:
+	e.g   def sum
+		arr=[1,3,5]
+		i=0
+		sum=0
+		while i<3 do
+		sum+=arr[i]
+	      end	
+	      
+	      Ans: 9
+	      
+	      
+3) each iterator:
+	e.g def sum
+		arr=[1,3,7,8]
+   		sum=0
+    		arr.each do |no|
+     		   sum+=no
+    		end
+   		return sum
+ 	     end
+	    
+	    Ans: 19 
+	      
+	      
+4) unless 
+	e.g  def prints(name)
+		"Hello World" unless name.empty?
+	     end
+	     
+	     prints("abc")
+	     Ans: "Hello World"
+	     
+	     prints("")
+	     Ans:nil
+	
+
+
+5) break, and next: break breaks loop and next continue loop if condition is matched
+	1) def display_no
+		a=[1,3,4,5]
+		a.each do |no|
+			break if no >3
+		p no
+		end
+		a.each do |no|
+			next if no < 4
+		p no
+		end
+	   end
+	   
+	   Ans: 1 
+	   	3
+	   	4
+	   	5
+	   	
+6) Block and yeild:
+	We can pass block implicitly and explicitly 
+	i)Implicitly:
+		We can pass block and call by yeild
+		e.g def blocks
+  			yield if block_given?
+		    end	
+		    
+		    blocks { puts "Block called yeild"}
+		    
+	ii)Explicitly: here we can call block by call method
+		def explicit (&block)
+      		   block.call 
+    		end
+    		
+    		explicit { puts "Explicit block called" }  
+    		
+    		
+    	6) My each method:
+    	
+    		def my_each
+    		  
+ 		  0.upto(arr.length - 1) do |x|
+    			yield arr[x]
+  		  end
+		end
+		
+		arr=[1,4,5]
+		arr.my_each
+		
+		Ans:#<Enumerator: [1, 4, 5]:each>
+ 	
+7) Difference between lambda and proc
+Procs and lambda are very much similar to each other but some differences are there:
+	1)procs dont check number of parameter until all arguments are not used,but lambda does 
+	e.g: proc1 = Proc.new { |a, b| a + 5 }
+	     proc1.call(2) 	
+	     
+	     Ans: 7 
+	     
+	     lambda1 = lambda { |a, b| a + 5 }
+	     lambda1.call(2)
+	     
+	     Ans: It will give error: wrong number of arguments (1 for 2)		   	
+
+	     But,
+	     proc1 = Proc.new { |a, b| a + b }
+	     proc1.call(2) 
+	     
+	     Ans: Here we will get error of TypeError
+	     
+	 2)proc returns from the calling method, while Lambda doesn’t
+	 e.g def methods
+		Proc.new { return ‘return from proc’ }.call
+   		return ‘return from method’
+ 		end
+ 		
+ 		Ans: return from proc
+ 	
+ 	
+ 		def methods
+		   lambda { return ‘return from lambda’ }.call
+		   return ‘return from method’
+		   end
+		   
+		  Ans: return from method
+		  
+	3)procs must be called in methods only
+	e.g procs = Proc.new { return “Hello World!!” }
+	    procs.call()
+	    
+	    Ans:gives error
+	    
+	    lamb = lambda.new { return “Hello World!!” }
+	    lamb.call()	
+
+	    Ans: "Hello World!!"	
